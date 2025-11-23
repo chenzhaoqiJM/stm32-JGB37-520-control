@@ -12,6 +12,13 @@
 /*                                                     */
 /*-----------------------------------------------------*/
 
+/*-------------- 接线 -------------------*/
+// 电机驱动线接 L298N 的输出端
+// L298N 的 IN1->C3、IN2->C2、EN1->A6
+// 霍尔编码器：电源接3.3v和GND、A相(黄线)->A0、B相(绿线)->A1
+/*---------------------------------------*/
+
+
 #include "stm32f10x.h" 
 #include "main.h"       
 #include "delay.h"      
@@ -133,7 +140,7 @@ int main(void)
 	float target_speed;
 	int pwm_output;
 	
-	PID_Init(20.0, 60.0, 0.05);  // 你可以之后调参
+	PID_Init(85.0, 120.0, 0.05);  // 你可以之后调参
 
 	
 	Delay_Init();           //延时功能初始化              
@@ -159,7 +166,7 @@ int main(void)
         speed_count = Read_Encoder(); 
         
         // 2. 计算转速 (假设减速比为 30)，单位: 转/s
-        rpm = (float)speed_count * 10 / (11 * 4 * 6.3);
+        rpm = (float)speed_count * 10 / (11 * 4 * 30);
 		
 		if(rpm<0){
 			abs_rpm = -1.0 * rpm;
