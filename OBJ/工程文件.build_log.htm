@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 11 869948402@qq.com, 11, LIC=CZLZX-HWV47-12LLE-5JBC1-X7RG9-4IRGX
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\86994\Desktop\USB串口-电机\USER\工程文件.uvprojx
+Project File Date:  11/19/2025
+
+<h2>Output:</h2>
+Rebuild target '工程'
+compiling main.c...
+main.c(144): warning:  #223-D: function "Encoder_TIM2_Init" declared implicitly
+      Encoder_TIM2_Init(); // 姝ゆ椂 TIM2 寮�濮嬪湪鍚庡彴榛橀粯鏁拌剦鍐?      ^
+main.c(146): warning:  #223-D: function "PWM_T3CH1_PA6_Init" declared implicitly
+        PWM_T3CH1_PA6_Init(1000,72); //72M/72=1Mhz鐨勮鏁伴鐜?閲嶈1000锛屾墍浠WM棰戠巼涓?1M/1000=1Khz.   
+main.c(127): warning:  #177-D: variable "value" was declared but never referenced
+        int value = 0;
+main.c(129): warning:  #177-D: variable "pwm" was declared but never referenced
+        int pwm = 0;
+main.c: 4 warnings, 0 errors
+compiling delay.c...
+compiling usart1.c...
+compiling timer4.c...
+compiling stm32f10x_it.c...
+compiling pwm.c...
+compiling led.c...
+compiling encoder.c...
+encoder.c(41): warning:  #1-D: last line of file ends without a newline
+  }
+encoder.c(11): warning:  #177-D: variable "TIM_ICInitStructure" was declared but never referenced
+      TIM_ICInitTypeDef TIM_ICInitStructure;
+encoder.c: 2 warnings, 0 errors
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling misc.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_gpio.c...
+linking...
+Program Size: Code=18016 RO-data=860 RW-data=36 ZI-data=2188  
+FromELF: creating hex file...
+"..\OBJ\工程文件.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\86994\Desktop\USB串口-电机\USER\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>
